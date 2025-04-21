@@ -2,16 +2,16 @@
 
 A SQL-based project to analyze and visualize structured user feedback. This project demonstrates hands-on SQL skills in schema design, data filtering, and feedback analysis using real-world inspired queries.
 
-##  Features
-- Store user feedback with ratings and categories.
+## Features
+- Stores user feedback with ratings and categories.
 - SQL queries for insights (e.g., average ratings, top issues).
-- Sample data and schema included.
+- Includes sample data and schema.
 - Designed for learning and real-world application.
 
-##  Use Case
+## Use Case
 Ideal for businesses or educational platforms to evaluate customer/student feedback and improve services based on data insights.
 
-##  Database Schema
+## Database Schema
 
 ```sql
 CREATE TABLE feedback (
@@ -23,9 +23,6 @@ CREATE TABLE feedback (
     feedback_date DATE
 );
 
-##  Sample SQL Queries
-
-```sql
 -- 1. Average rating per category
 SELECT category, ROUND(AVG(rating), 2) AS avg_rating
 FROM feedback
@@ -46,18 +43,9 @@ FROM feedback
 ORDER BY feedback_date DESC
 LIMIT 5;
 
-##  Sample Data
-
-```sql
 INSERT INTO feedback (id, user_name, category, rating, comment, feedback_date) VALUES
 (1, 'Aanya', 'UI', 4, 'The UI is clean but could use more color.', '2024-12-01'),
 (2, 'Rohan', 'Performance', 2, 'App loads slowly during peak hours.', '2024-12-03'),
 (3, 'Meera', 'Features', 5, 'Loved the new features added this month!', '2024-12-05'),
 (4, 'Dev', 'Support', 1, 'Customer support was not responsive.', '2024-12-06'),
 (5, 'Tina', 'UI', 3, 'Needs better font contrast.', '2024-12-07');
-
-##  Optional Future Enhancements
-- Integrate with Google Forms or frontend forms for real-time data input.
-- Perform sentiment analysis on feedback comments.
-- Filter feedback by date range or user for customized reporting.
-- Export dashboard as a PDF or CSV report.
